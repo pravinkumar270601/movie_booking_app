@@ -1,0 +1,35 @@
+.moive-img {
+  height: 450px;
+}
+#alter-card-body {
+  height: 240px;
+  
+}
+#alter-card-title{
+    height: 50px;
+}
+.carousel-inner{
+  height: 280px;
+}
+.carousel-bnner-img {
+  height: 280px;
+  object-fit: cover;
+
+}
+/* .card-title{
+    height: 50px;
+} */
+
+@media (min-width: 992px) {
+  .LatestMovies-body {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .LatestMovies-body {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}

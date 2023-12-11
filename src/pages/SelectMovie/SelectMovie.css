@@ -1,0 +1,9 @@
+.SelectMovie-display{
+    display: flex;
+}
+.SelectMovie-display-left{
+    width: 50%;
+}
+.SelectMovie-display-right{
+    width: 50%;
+}
