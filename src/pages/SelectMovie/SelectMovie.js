@@ -88,7 +88,7 @@ const SelectMovie = ({ slectbook, setGetseats }) => {
             <div className="container">
               <div className="row movieSets-row mt-3">
                 {movieSets.map((movieSet, index) => (
-                  <div className="col-lg-1 col-md-1 col-sm-2">
+                  <div className="col-lg-1 col-md-1 col-sm-2 ">
                     <div className="movieSets-div" key={movieSet.id}>
                       <input
                         type="checkbox"
