@@ -1,0 +1,110 @@
+.TicketBooked-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.TicketBooked-full-div {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  /* border: 2px solid white; */
+  background-color: white;
+  color: black;
+
+  border-radius: 10px;
+}
+
+/* css for top left */
+.TicketBooked-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.TicketBooked-top-left-div {
+  width: 30%;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* css for  top right */
+.TicketBooked-top-right-div {
+  width: 70%;
+  padding: 20px;
+}
+.TicketBooked-movie-title {
+  font-size: 17.8px;
+  font-weight: 900;
+}
+.TicketBooked-movie-language {
+  margin-top: 10px;
+}
+.TicketBooked-movie-date {
+  margin-top: 10px;
+}
+.TicketBooked-movie-theater {
+  margin-top: 10px;
+}
+.TicketBooked-suppor-detail {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(214, 214, 214);
+  border-radius: 20px;
+}
+
+/* css for bottom left */
+.TicketBooked-bottom-left-div {
+  text-align: center;
+  width: 30%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.TicketBooked-qr-code {
+  width: 75%;
+}
+/* css for bottom right */
+.TicketBooked-bottom-right-div {
+  width: 70%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+.TicketBooked-movie-title,
+.TicketBooked-ticket-count,
+.TicketBooked-seats-num,
+.TicketBooked-bookid-div {
+  margin-top: 10px;
+}
+.TicketBooked-bookid-span {
+  font-size: 17px;
+  font-weight: bolder;
+}
+.TicketBooked-total {
+  padding: 20px;
+}
+.TicketBooked-total-amount {
+  font-weight: 900;
+}
+
+@media (min-width: 992px) {
+  .TicketBooked-full-div {
+    width: 40%;
+  }
+}
+
+@media (max-width: 991px) {
+  .TicketBooked-full-div {
+    width: 90%;
+  }
+  .TicketBooked-bookid-span {
+    font-size: 14px !important;
+  }
+  /* .TicketBooked-img {
+    object-fit: cover;
+  } */
+
+  .TicketBooked-suppor-detail {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}

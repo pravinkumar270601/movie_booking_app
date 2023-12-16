@@ -1,9 +1,146 @@
-.SelectMovie-display{
-    display: flex;
+.SelectMovie-display {
+  display: flex;
 }
-.SelectMovie-display-left{
-    width: 50%;
+
+.SelectMovie-banner-display {
+  height: 100%;
+  width: 100%;
 }
-.SelectMovie-display-right{
-    width: 50%;
+
+/* css for seats ````````````````````````````````````` */
+
+.movieSets-div {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.movieSets-div input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: 1px solid rgba(7, 255, 3, 0.995); /* Border color when not checked */
+  width: 45px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.movieSets-div input[type="checkbox"]:checked {
+  background-color: rgba(
+    48,
+    196,
+    45,
+    0.995
+  ); /* Background color when checked */
+  border: 2px solid rgba(48, 196, 45, 0.995); /* Border color when checked */
+}
+
+.movieSets-label {
+  position: absolute;
+  left: 13px !important;
+  top: 7px !important;
+  cursor: pointer;
+}
+.movieSets-div input[type="checkbox"]:checked + .movieSets-label {
+  color: rgb(251, 251, 251);
+}
+
+/* SelectMovie-display-left--------------------------- */
+
+.SelectMovie-qus-div {
+  margin-top: 30px;
+}
+.SelectMovie-title-span {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 600;
+  color: rgb(207, 53, 25);
+}
+/* .movieSets-heading{
+} */
+
+.SelectMovie-language-span {
+  font-size: 20px;
+  color: yellow;
+}
+.SelectMovie-overview-span {
+  color: teal;
+}
+.SelectMovie-releasedate-span {
+  color: tan;
+}
+.SelectMovie-popularity-span {
+  color: rgb(243, 58, 106);
+}
+
+.SelectMovie-qus {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.movieSets-btn {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+  .SelectMovie-body {
+    padding-left: 40px;
+  }
+  .SelectMovie-display-left {
+    width: 35%;
+  }
+  .SelectMovie-display-right {
+    width: 65%;
+  }
+  .SelectMovie-title-span {
+    font-size: 40px;
+  }
+  .SelectMovie-banner-display {
+  -webkit-mask-image: linear-gradient(to left, black, transparent);
+  mask-image: linear-gradient(to left, black, transparent);
+}
+}
+
+@media (max-width: 991px) {
+  .SelectMovie-display {
+    flex-direction: column;
+  }
+  .SelectMovie-display-left {
+    width: 100%;
+    order: 2;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .SelectMovie-display-right {
+    width: 100%;
+    order: 1;
+  }
+
+  .SelectMovie-title-span {
+    font-size: 30px;
+  }
+    .SelectMovie-banner-display {
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+  mask-image: linear-gradient(to bottom, black, transparent);
+}
+.movieSets-heading{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+}
+
+@media (max-width: 575px) {
+  /* .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0px;
+  }
+  .grid-item {
+    padding: 20px;
+  } */
+  .movieSets-row{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr !important;
+    column-gap: 0;
+    
+  }
 }

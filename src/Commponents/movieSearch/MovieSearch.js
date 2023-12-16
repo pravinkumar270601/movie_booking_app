@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { FaStar } from "react-icons/fa";
 
 const MovieSearch = ({ search, setslectbook }) => {
   const [MovieSearch, setMovieSearch] = useState([]);
@@ -14,6 +15,7 @@ const MovieSearch = ({ search, setslectbook }) => {
     const responseJson = await response.json();
     setMovieSearch(responseJson.results);
   }
+  console.log(MovieSearch,"MovieSearch")
 
   return (
     <div>
@@ -23,7 +25,7 @@ const MovieSearch = ({ search, setslectbook }) => {
 </form>  */}
         {/* onChange={(e)=>setSearching(e.target.value)} */}
         {search ? <h1>Your Search</h1> : null}
-        <div className="row">
+        <div className="row search-row">
           {MovieSearch.map((movie) => (
             <div className="col-lg-3 col-sm-6 col-md-4 mt-4">
               <div className="" key={movie.id}>
@@ -31,23 +33,32 @@ const MovieSearch = ({ search, setslectbook }) => {
                   <img
                     src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`}
                     className="moive-img"
-                    alt="..."
+                    alt={`${movie.title}`}
                   />
                   <div className="card-body" id="alter-card-body">
                     {/* Movie Title */}
-                    <h5 className="card-title" id="alter-card-title">
-                      {movie.title}
-                    </h5>
-                    <p className="card-text">
-                      Language: {movie.original_language}
-                    </p>
-                    <p>
-                      Ratine: <strong>{movie.vote_average}</strong>
-                    </p>
-                    <p className="h5">Rs: 180/ per seat</p>
+                    {movie.adult?<div className="adult-movie">18+</div>:null}
+                    <div className="card-text">
+                      <span className="card-qus"> Language: </span>{" "}
+                      <span className="card-language">
+                        {movie.original_language}
+                      </span>
+                    </div>
+                    <div>
+                      <span className="card-qus"> Rating: </span>
+                      <span>
+                        <FaStar className="FaStar-star" />
+                      </span>
+                      <span className="card-rating">
+                        {movie.vote_average.toFixed(1)}/10
+                      </span>
+                    </div>
+                    <div className="card-seat">
+                      <span className="card-qus">Rs: </span>180/ per seat
+                    </div>
 
                     {/* Booking button */}
-                    <Link to="selctbooking">
+                    <Link to="/selctbooking">
                       <button
                         className="btn btn-danger book-btn"
                         onClick={() =>
@@ -57,6 +68,7 @@ const MovieSearch = ({ search, setslectbook }) => {
                               title: movie.title,
                               original_language: movie.original_language,
                               backdrop_path: movie.backdrop_path,
+                              poster_path:movie.poster_path,
                               overview: movie.overview,
                               release_date: movie.release_date,
                               popularity: movie.popularity,
