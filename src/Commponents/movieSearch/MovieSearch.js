@@ -24,7 +24,7 @@ const MovieSearch = ({ search, setslectbook }) => {
     <input value={serchitem} onChange={(e)=>setserchitem(e.target.value)} type="text"/>
 </form>  */}
         {/* onChange={(e)=>setSearching(e.target.value)} */}
-        {search ? <h1>Your Search</h1> : null}
+        {search ? <h1 className="your-search-h1">Your Search</h1> : null}
         <div className="row search-row">
           {MovieSearch.map((movie) => (
             <div className="col-lg-3 col-sm-6 col-md-4 mt-4">
