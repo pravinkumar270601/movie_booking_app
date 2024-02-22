@@ -11,7 +11,7 @@ import logo from "./image/movie_logo.png";
 import ScrollToTop from "./pages/ScrollToTop/ScrollToTop";
 
 function App() {
-  const [search, setsearch] = useState("");
+  const [search, setsearch] = useState("  s");
   const [slectbook, setslectbook] = useState([]);
   const [Getseats, setGetseats] = useState([]);
 

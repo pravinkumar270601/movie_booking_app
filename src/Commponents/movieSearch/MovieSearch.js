@@ -8,7 +8,7 @@ const MovieSearch = ({ search, setslectbook }) => {
 
   useEffect(() => {
     getMovies();
-  }, [search]);
+  },[search]);
   async function getMovies() {
     const API_URL = `https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query=%22${search}%22`;
     const response = await fetch(API_URL);
@@ -24,7 +24,7 @@ const MovieSearch = ({ search, setslectbook }) => {
     <input value={serchitem} onChange={(e)=>setserchitem(e.target.value)} type="text"/>
 </form>  */}
         {/* onChange={(e)=>setSearching(e.target.value)} */}
-        {search ? <h1 className="your-search-h1">Your Search</h1> : null}
+        {search==="  " ? null : search!=="  " ? <h1 className="your-search-h1">Your Search</h1>:null}
         <div className="row search-row">
           {MovieSearch.map((movie) => (
             <div className="col-lg-3 col-sm-6 col-md-4 mt-4">
